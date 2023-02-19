@@ -1,0 +1,48 @@
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  display: block;
+  filter: invert(100%);
+}
+
+/* 5A0001 - dark red */
+/* CC2425 - bright red */
+
+* {
+  background-color: black;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+nav > ul > li {
+  border: solid white;
+  padding: 8px;
+  border-radius: 30%;
+  font-family: Kanit;
+  color: black;
+}
+
+#mainVid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
+}
+
+footer {
+  color: white;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: #CC2425;
+}
