@@ -13,19 +13,25 @@
   background-color: black;
 }
 
+nav {
+  border-bottom: 5px white;
+}
+
 nav > ul {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   padding-top: 30px;
+  padding-right: 200px;
+  padding-left: 200px;
 }
 
-nav > ul > li {
-  border: solid white;
+#navLinks {
   padding: 8px;
   border-radius: 30%;
   font-family: Kanit;
   color: black;
+  list-style-type: none;
 }
 
 #mainVid {
@@ -40,9 +46,13 @@ footer {
 }
 
 a:link {
-  color: red;
+  color: white;
+}
+
+a:hover {
+  color: #ff0000;
 }
 
 a:visited {
-  color: #CC2425;
+  color: white;
 }
