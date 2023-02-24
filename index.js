@@ -35,7 +35,7 @@ router.hooks({
       case "Home":
         axios
           .get(
-            `api link goes here`
+            //`api link goes here`
           )
           .then(response => {
 
