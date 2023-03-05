@@ -24,39 +24,38 @@ document.querySelector(".fa-bars").addEventListener("click", () => {
 });
 }
 
-// router.hooks({
-//   before: (done, params) => {
-//     const view =
-//       params && params.data && params.data.view
-//         ? capitalize(params.data.view)
-//         : "Home"; // Add a switch case statement to handle multiple routes
-//     // Add a switch case statement to handle multiple routes
-//     switch (view) {
-//       case "Home":
-//         axios
-//           .get(
-//             //`api link goes here`
-//           )
-//           .then(response => {
+router.hooks({
+  before: (done, params) => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home"; // Add a switch case statement to handle multiple routes
+    // Add a switch case statement to handle multiple routes
+    switch (view) {
+      case "Home":
+        axios
+          .get(
+            `${process.env.API_URL}`
+          )
+          .then(response => {
+              console.log(response.data);
+            done();
+          });
+        break;
+      default:
+        done();
+    }
 
+  },
+  already: params => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home";
 
-//             done();
-//           });
-//         break;
-//       default:
-//         done();
-//     }
-
-//   },
-//   already: params => {
-//     const view =
-//       params && params.data && params.data.view
-//         ? capitalize(params.data.view)
-//         : "Home";
-
-//     render(store[view]);
-//   }
-// });
+    render(store[view]);
+  }
+});
 
 router
   .on({
