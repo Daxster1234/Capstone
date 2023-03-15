@@ -53,11 +53,6 @@ app.get("/status", (request, response) => {
   response.status(200).json({message: 'Service Healthy'});
 });
 
-app.post("/events", (request, response) => {
-  const responseBody = request.body;
-  response.json(responseBody);
-});
-
 app.use('/events', events);
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
