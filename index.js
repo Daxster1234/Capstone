@@ -20,13 +20,15 @@ function render(state = store.Home) {
 
 function afterRender(state) {
   // add menu toggle to bars icon in nav bar
-document.querySelector(".fa-bars").addEventListener("click", () => {
-  document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-});
+// document.querySelector(".fa-bars").addEventListener("click", () => {
+//   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+// });
+
+
 
 if (state.view === "Events") {
-  document.querySelector("form").addEventListener("submit", event => {
-    event.preventDefault();
+  // document.querySelector("form").addEventListener("submit", event => {
+  //   event.preventDefault();
 
     // const inputList = event.target.elements;
     // console.log("Input Element List", inputList);
@@ -50,16 +52,14 @@ if (state.view === "Events") {
     // console.log("request Body", requestData);
 
     axios
-      .post(`${process.env.API_URL}/events`, requestData)
+      .get(`${process.env.API_URL}/events`, requestData)
       .then(response => {
-        // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
         store.Event.events.push(response.data);
         router.navigate("/Event");
       })
       .catch(error => {
         console.log("It puked", error);
       });
-  });
 }
 }
 
@@ -74,7 +74,7 @@ router.hooks({
       case "Home":
         axios
           .get(
-            `${process.env.API_URL}`
+            `${process.env.API_URL}/events`
           )
           .then(response => {
               console.log(response.data);

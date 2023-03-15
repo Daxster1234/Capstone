@@ -3,7 +3,6 @@ import html from "html-literal";
 export default () => html`
 <footer>
 <ul>
-  <li>Instagram: machete.exe</li>
-  <li>Contact: dax.meredith@gmail.com</li>
+  <li><a href="https://www.instagram.com/machete.exe/" target="_blank">Machete</a></li>
 </ul>
 </footer>`;
