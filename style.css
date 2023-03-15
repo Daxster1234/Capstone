@@ -19,11 +19,15 @@ nav {
 
 nav > ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: row;
   padding-top: 30px;
   padding-right: 200px;
   padding-left: 200px;
+}
+
+a:active {
+  color: #ff0000;
 }
 
 #navLinks {
@@ -32,6 +36,7 @@ nav > ul {
   font-family: Kanit;
   color: black;
   list-style-type: none;
+  font-size: x-large;
 }
 
 #mainVid {
@@ -42,7 +47,18 @@ nav > ul {
 }
 
 footer {
+
   color: white;
+  position: fixed;
+  bottom: 0;
+  font-family: Kanit;
+  padding-left: 0%;
+}
+
+footer > ul > li {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
 }
 
 a {
@@ -53,3 +69,19 @@ a {
 a:hover {
   color: #ff0000;
 }
+
+#aboutH {
+  font-family: Kanit;
+  display: flex;
+  padding-top: 25px;
+  justify-content: space-evenly;
+}
+
+#aboutP {
+  font-family: Kanit;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: larger;
+  text-align: center;
+}
+
