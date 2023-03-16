@@ -1,8 +1,8 @@
 import html from "html-literal";
-import cornelMachete from '../photos/M3.jpg';
-import shane from '../photos/shane.jpg';
-import elias from '../photos/elias.jpg';
-import dax from '../photos/dax.jpg';
+import cornelMachete from '../photos/cornel.jpg';
+import shane from '../photos/s.jpg';
+import elias from '../photos/e.jpg';
+import dax from '../photos/d.jpg';
 
 export default () => html`
 <h1 id="aboutH">About Machete</h1>
