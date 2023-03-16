@@ -68,16 +68,16 @@ router.hooks({
     const view =
       params && params.data && params.data.view
         ? capitalize(params.data.view)
-        : "Home"; // Add a switch case statement to handle multiple routes
+        : "Events"; // Add a switch case statement to handle multiple routes
     // Add a switch case statement to handle multiple routes
     switch (view) {
-      case "Home":
+      case "Events":
         axios
           .get(
-            `${process.env.API_URL}`
+            `${process.env.API_URL}/events`
           )
           .then(response => {
-              console.log(response.data);
+              store.Events.events = response.data;
             done();
           });
         break;

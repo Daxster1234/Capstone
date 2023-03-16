@@ -92,7 +92,7 @@ a:hover {
   color: #ff0000;
 }
 
-#aboutH {
+h1 {
   font-family: Kanit;
   display: flex;
   padding-top: 25px;
