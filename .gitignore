@@ -6,4 +6,4 @@ node_modules
 *.sw*
 .env
 .env.*
-package-lock.json
+
