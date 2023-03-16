@@ -74,7 +74,7 @@ router.hooks({
       case "Home":
         axios
           .get(
-            `${process.env.API_URL}/events`
+            `${process.env.API_URL}`
           )
           .then(response => {
               console.log(response.data);
