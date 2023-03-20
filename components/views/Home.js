@@ -3,7 +3,5 @@ import html from "html-literal";
 
 export default () => html`
 <div>
-<!-- <video src='../photos/Machete.mp4' id="mainVid" height="490" width="750" controls>
-  <source src='../photos/Machete.mp4' type="video"> -->
-<!-- </video> -->
+<iframe id="mainVid"width="896" height="504" src="https://www.youtube.com/embed/Lj1yQsHWjyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>`
