@@ -11,14 +11,16 @@ export default () => html`
   After a year-long hiatus due to the COVID-19 pandemic, Machete returned to playing shows in late 2021 and was joined by Shane Cheek(bass) and began playing shows
   semi-regularly around the Harrisonburg area, garnering a small following. Machete is currently active in the Harrisonburg and larger Virginia DIY music scene, continuing
   to grow and develop their sound.</p>
+<div id="grid">
 <div id='row'>
-  <div id='column'>
+  <div class='column'>
     <img class='aboutImg' src=${cornelMachete}/>
     <img class='aboutImg' src=${shane}/>
   </div>
-  <div id='column'>
+  <div class='column'>
     <img class='aboutImg' src=${elias}/>
     <img class='aboutImg' src=${dax}/>
   </div>
+</div>
 </div>
 `

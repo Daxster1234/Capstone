@@ -27,31 +27,7 @@ function afterRender(state) {
 
 
 if (state.view === "Events") {
-  // document.querySelector("form").addEventListener("submit", event => {
-  //   event.preventDefault();
-
-    // const inputList = event.target.elements;
-    // console.log("Input Element List", inputList);
-
-    // const toppings = [];
-    // // Interate over the toppings input group elements
-    // for (let input of inputList.toppings) {
-    //   // If the value of the checked attribute is true then add the value to the toppings array
-    //   if (input.checked) {
-    //     toppings.push(input.value);
-    //   }
-    // }
-
-    // const requestData = {
-    //   customer: inputList.customer.value,
-    //   crust: inputList.crust.value,
-    //   cheese: inputList.cheese.value,
-    //   sauce: inputList.sauce.value,
-    //   toppings: toppings
-    // };
-    // console.log("request Body", requestData);
-
-    axios
+  axios
       .get(`${process.env.API_URL}/events`, requestData)
       .then(response => {
         store.Event.events.push(response.data);
@@ -60,8 +36,32 @@ if (state.view === "Events") {
       .catch(error => {
         console.log("It puked", error);
       });
-}
-}
+};
+// let navEl = document.getElementById('navLinks');
+// navEl.addEventListener('click', () => {
+//   location.reload();
+// });
+
+// if (state.view === 'Home') {
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  let element = document.getElementById('embed-iframe');
+  let options = {
+      width: '60%',
+      height: '200',
+      uri: 'spotify:episode:66jnO3vrl8Aji20pkl1Y7w'
+    };
+  let callback = (EmbedController) => {
+    document.querySelectorAll('ul#episodes > li > button').forEach(
+      episode => {
+        episode.addEventListener('click', () => {
+            EmbedController.loadUri(episode.dataset.spotifyId)
+        });
+      })
+  };
+  IFrameAPI.createController(element, options, callback);
+};
+};
+// };
 
 router.hooks({
   before: (done, params) => {
@@ -77,6 +77,7 @@ router.hooks({
             `${process.env.API_URL}/events`
           )
           .then(response => {
+              store.Events.events = {};
               store.Events.events = response.data;
             done();
           });

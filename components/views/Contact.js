@@ -2,6 +2,7 @@ import html from "html-literal";
 
 export default () => html`
 <h1>Contact Us</h1>
+<div class="form">
 <form
   action="https://formspree.io/f/xeqwzwbe"
   method="POST"
@@ -28,4 +29,5 @@ export default () => html`
   </label>
   <button type="submit">Send</button>
 </form>
+</div>
 `
