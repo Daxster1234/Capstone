@@ -11,6 +11,7 @@
 
 * {
   background-color: black;
+  color: white;
 }
 
 nav {
@@ -46,35 +47,14 @@ a:active {
   padding-top: 70px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 16px;
-  justify-content: center;
-}
-
-.column {
-  flex: 50%;
-  padding: 0 16px;
-}
-
-.column img {
-  margin-top: 16px;
-  vertical-align: middle;
-}
-
-.aboutImg {
-  height: 20%;
-  width: 20%;
-}
-
 footer {
-
   color: white;
   position: fixed;
   bottom: 0;
   font-family: Kanit;
   padding-left: 0%;
+  width: 100%;
+  text-align: center;
 }
 
 footer > ul > li {
@@ -107,3 +87,112 @@ h1 {
   text-align: center;
 }
 
+#row {
+  display: flex;
+}
+
+div.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+#eventDiv {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+#eventTable {
+  margin: auto;
+  font-family: Kanit;
+  font-size: x-large;
+  border-spacing: 10%;
+}
+
+/* #eventTable tbody {
+  width: 100%;
+  height: auto;
+  margin: auto;
+} */
+
+
+#spotify {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  font-family: Kanit;
+}
+
+div.form {
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: Kanit;
+  height: 50%;
+}
+
+form > *{
+  background-color: darkgray;
+  height: 50%;
+  color: black;
+}
+
+textarea {
+  width: 150px;
+  height: 150px;
+  resize: none;
+}
+
+div.merch {
+  text-align: center;
+  font-family: Kanit;
+  padding: 10px;
+}
+
+#merchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+p.disclaimer {
+  font-family: Kanit;
+  text-align: center;
+  margin-top: 10%;
+}
+
+#embed-iframe {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+ul#episodes {
+  float: left;
+  margin:  0 10px;
+  padding: 0;
+  width: 20%;
+}
+
+ul#episodes > li {
+  list-style-type: none;
+}
+
+button {
+  border-radius:  7px;
+  border: 0;
+  background: rgb(56, 56, 56);
+  color: white;
+  padding:  10px;
+  margin:  0 50px 3px 0;
+  width: 80%;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff0000;
+}
