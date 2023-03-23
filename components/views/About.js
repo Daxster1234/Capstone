@@ -14,12 +14,16 @@ export default () => html`
 <div id="grid">
 <div id='row'>
   <div class='column'>
-    <img class='aboutImg' src=${cornelMachete}/>
-    <img class='aboutImg' src=${shane}/>
+    <div class='picture' id='picOne'>
+    </div>
+    <div class='picture' id='picTwo'>
+    </div>
   </div>
   <div class='column'>
-    <img class='aboutImg' src=${elias}/>
-    <img class='aboutImg' src=${dax}/>
+    <div class='picture' id='picThree'>
+    </div>
+    <div class='picture' id='picFour'>
+    </div>
   </div>
 </div>
 </div>
