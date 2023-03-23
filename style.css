@@ -87,14 +87,14 @@ h1 {
   text-align: center;
 }
 
-#row {
+/* #row {
   display: flex;
 }
 
 div.column {
   flex: 33.33%;
   padding: 5px;
-}
+} */
 
 #eventDiv {
   display: flex;
@@ -102,8 +102,16 @@ div.column {
 
 }
 
+td {
+  padding-right: 10%;
+  border: solid white 3px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: red;
+}
+
 #eventTable {
-  margin: auto;
+  /* margin: auto; */
   font-family: Kanit;
   font-size: x-large;
   border-spacing: 10%;
@@ -195,4 +203,36 @@ button {
 
 button:hover {
   background: #ff0000;
+}
+
+#picOne {
+  background-image: url('./components/photos/e.jpg');
+  background-size: cover;
+  float: right;
+}
+
+#picTwo {
+  background-image: url('./components/photos/s.jpg');
+  background-size: cover;
+}
+
+#picThree {
+  background-image: url('./components/photos/cornel.jpg');
+  background-size: cover;
+  float: right;
+}
+
+#picFour {
+  background-image: url('./components/photos/d.jpg');
+  background-size: cover;
+}
+
+div.picture {
+  height: 40em;
+  width: 50%;
+  text-align: center;
+}
+
+#column {
+  text-align: center;
 }

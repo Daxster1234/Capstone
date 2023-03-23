@@ -4,7 +4,7 @@ export default (links) => html`
 <nav>
 <i class=""></i>
 <ul class="hidden--mobile nav-links">
-  ${links.map((link) => `<li id="navLinks"><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`).join("")}
+  ${links.map((link) => `<li id="navLinks"><a id='${link.title}' href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`).join("")}
 </ul>
 </nav>`;
 
