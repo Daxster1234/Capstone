@@ -1,6 +1,6 @@
 import html from "html-literal";
-import shirt from '../photos/shirt.jpg';
-import sticker from '../photos/sticker.jpg';
+import shirt from '../photos/shirt.png';
+import sticker from '../photos/stickers.png';
 
 export default () => html`
 <h1>Available Merchandise</h1>
