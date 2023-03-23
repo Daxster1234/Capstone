@@ -24,42 +24,40 @@ function afterRender(state) {
 //   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
 // });
 
-
-
-if (state.view === "Events") {
-  axios
-      .get(`${process.env.API_URL}/events`, requestData)
-      .then(response => {
-        store.Event.events.push(response.data);
-        router.navigate("/Event");
-      })
-      .catch(error => {
-        console.log("It puked", error);
-      });
-};
+// if (state.view === "Events") {
+//   axios
+//       .get(`${process.env.API_URL}/events`, requestData)
+//       .then(response => {
+//         store.Event.events.push(response.data);
+//         router.navigate("/Event");
+//       })
+//       .catch(error => {
+//         console.log("It puked", error);
+//       });
+// };
 // let navEl = document.getElementById('navLinks');
 // navEl.addEventListener('click', () => {
 //   location.reload();
 // });
 
 // if (state.view === 'Home') {
-window.onSpotifyIframeApiReady = (IFrameAPI) => {
-  let element = document.getElementById('embed-iframe');
-  let options = {
-      width: '60%',
-      height: '200',
-      uri: 'spotify:episode:66jnO3vrl8Aji20pkl1Y7w'
-    };
-  let callback = (EmbedController) => {
-    document.querySelectorAll('ul#episodes > li > button').forEach(
-      episode => {
-        episode.addEventListener('click', () => {
-            EmbedController.loadUri(episode.dataset.spotifyId)
-        });
-      })
-  };
-  IFrameAPI.createController(element, options, callback);
-};
+// window.onSpotifyIframeApiReady = (IFrameAPI) => {
+//   let element = document.getElementById('embed-iframe');
+//   let options = {
+//       width: '60%',
+//       height: '200',
+//       uri: 'spotify:episode:66jnO3vrl8Aji20pkl1Y7w'
+//     };
+//   let callback = (EmbedController) => {
+//     document.querySelectorAll('ul#episodes > li > button').forEach(
+//       episode => {
+//         episode.addEventListener('click', () => {
+//             EmbedController.loadUri(episode.dataset.spotifyId)
+//         });
+//       })
+//   };
+//   IFrameAPI.createController(element, options, callback);
+// };
 };
 // };
 
@@ -68,7 +66,7 @@ router.hooks({
     const view =
       params && params.data && params.data.view
         ? capitalize(params.data.view)
-        : "Events"; // Add a switch case statement to handle multiple routes
+        : "Home"; // Add a switch case statement to handle multiple routes
     // Add a switch case statement to handle multiple routes
     switch (view) {
       case "Events":
@@ -81,6 +79,26 @@ router.hooks({
               store.Events.events = response.data;
             done();
           });
+        break;
+        case "Home":
+          window.onSpotifyIframeApiReady = (IFrameAPI) => {
+            let element = document.getElementById('embed-iframe');
+            let options = {
+                width: '60%',
+                height: '200',
+                uri: 'spotify:episode:66jnO3vrl8Aji20pkl1Y7w'
+              };
+            let callback = (EmbedController) => {
+              document.querySelectorAll('ul#episodes > li > button').forEach(
+                episode => {
+                  episode.addEventListener('click', () => {
+                      EmbedController.loadUri(episode.dataset.spotifyId)
+                  });
+                })
+            };
+            IFrameAPI.createController(element, options, callback);
+          };
+        done();
         break;
       default:
         done();
