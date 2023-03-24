@@ -3,5 +3,5 @@ import macheteLogo from './photos/IMG_2331.jpg'
 
 export default () => html `
 <header>
-<img id="logo" src=${macheteLogo}>
+<a href="/Home"><img id="logo" src=${macheteLogo}></a>
 </header>`;

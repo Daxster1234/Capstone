@@ -7,16 +7,23 @@ export default () => html`
   action="https://formspree.io/f/xeqwzwbe"
   method="POST"
   id="contactForm"
->
+  >
+  <div id='formContainer'>
+    <div id='formName'>
+    <label>
+      Name:
+      <input type='name' name="name" placeholder="Your Name">
+    </label>
+    </div>
   <label>
     Email:
-    <input type="email" name="email">
+    <input type="email" name="email" placeholder="youremail@email.com">
   </label>
+  Message:
   <label>
-    Message:
-    <textarea name="message"></textarea>
+    <textarea name="message" placeholder="Your message here"></textarea>
   </label>
-  <!-- your other form fields go here -->
+<div id='formContact'>
   <label>
     Reason for contact:
     <select>
@@ -27,7 +34,9 @@ export default () => html`
       <option>Other</option>
     </select>
   </label>
-  <button type="submit">Send</button>
+</div>
+  <button id='formButton' type="submit">Send</button>
+  </div>
 </form>
 </div>
 `

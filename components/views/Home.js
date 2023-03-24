@@ -13,22 +13,22 @@ export default () => html`
 
 <ul id="episodes">
 <li>
-    <button data-spotify-id="spotify:episode:66jnO3vrl8Aji20pkl1Y7w">
+    <button class='spotifyButton' data-spotify-id="spotify:episode:66jnO3vrl8Aji20pkl1Y7w">
       Setting the Scene
     </button>
   </li>
   <li>
-    <button data-spotify-id="spotify:episode:0rlEOf34urFJrkhMyLRGRk">
+    <button class='spotifyButton' data-spotify-id="spotify:episode:0rlEOf34urFJrkhMyLRGRk">
       MC5 and The Stooges
     </button>
   </li>
   <li>
-    <button data-spotify-id="spotify:episode:2O10nZiLleihrnj9GLXKmy">
+    <button class='spotifyButton' data-spotify-id="spotify:episode:2O10nZiLleihrnj9GLXKmy">
       The Ramones
     </button>
   </li>
   <li>
-    <button data-spotify-id="spotify:episode:7kXncSVpIoYtMtkbQlg5eE">
+    <button class='spotifyButton' data-spotify-id="spotify:episode:7kXncSVpIoYtMtkbQlg5eE">
       The Talking Heads
     </button>
   </li>
