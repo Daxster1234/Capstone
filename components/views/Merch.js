@@ -9,7 +9,7 @@ export default () => html`
     <img id="shirt" src=${shirt} width='380' height='500'>
     <p>Machete T-shirt (All Sizes)</p>
     <p>Designed by Seb Elbourne</p>
-    <p>[ $25 ]</p>
+    <p>[ $15 ]</p>
   </div>
   <div class="merch">
     <img id="sticker" src=${sticker} width='380' height='500'>
