@@ -3,7 +3,7 @@ import html from "html-literal";
 
 export default () => html`
 <div>
-<iframe id="mainVid"width="896" height="504" src="https://www.youtube.com/embed/Lj1yQsHWjyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe id="mainVid"width="896" height="504" src="https://www.youtube.com/embed/Lj1yQsHWjyk?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <div id='spotify'>
   <p>Thank you for coming to check out Machete! We'd love to see you at a show some day. We don't have any music to share right now, but we'd
